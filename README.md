@@ -1,10 +1,11 @@
 # LLM
 
-## part 1
+## Part 1
 > ChatGLM-6B 是清华与智谱AI开源的LLM模型。官网地址：[https://chatglm.cn/blog](https://chatglm.cn/blog)
+> 
 > 目前已ChatGLM-6B已开源。github：[https://github.com/THUDM/ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)。
 
-### try
+TRY
 ```
 # package
 git clone https://github.com/THUDM/ChatGLM-6B.git
@@ -22,11 +23,12 @@ response, history = model.chat(tokenizer, "晚上睡不着应该怎么办", hist
 print(response)
 ```
 
-
+## Part 2
 ### Ptuning V2 with ADGEN
 DATA
+
+[AdvertiseGen](https://cloud.tsinghua.edu.cn/f/b3f119a008264b1cabd1/?dl=1): 根据输入（content）生成一段广告词（summary）
 ```
-data: [AdvertiseGen](https://cloud.tsinghua.edu.cn/f/b3f119a008264b1cabd1/?dl=1): 根据输入（content）生成一段广告词（summary）
 
 {
 "content": "类型#上衣*版型#宽松*版型#显瘦*图案#线条*衣样式#衬衫*衣袖型#泡泡袖*衣款式#抽绳",
@@ -85,10 +87,12 @@ response, _ = model_ad.chat(tokenizer, "类型#上衣*材质#牛仔布*颜色#�
 print(f"ptuning: {response}") 
 ```
 
+## Part 3
 ### Ftuning with alpaca + LORA
 DATA
+
+[Alpaca](https://github.com/tatsu-lab/stanford_alpaca): 提示（+输入）+ 输出
 ```
-[alpaca](https://github.com/tatsu-lab/stanford_alpaca): 提示（+输入）+ 输出
 [
     {
         "instruction": "Give three tips for staying healthy.",

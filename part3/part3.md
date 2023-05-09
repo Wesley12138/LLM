@@ -1,5 +1,14 @@
 # LLM
 ## Part 3
+```
+对 ChatGLM-6B 模型基于 LoRA 进行finetune
+以alpaca 为例
+硬件需求
+  显卡: 显存 >= 16G (最好24G或者以上)
+  环境：
+    python>=3.8
+    cuda>=11.6, cupti, cuDNN, TensorRT等深度学习环境
+```
 ### Ftuning with alpaca + LORA
 DATA
 
